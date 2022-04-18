@@ -1,0 +1,24 @@
+Source Code Repos:
+1. Shop-admin backend Shopizer revised: 
+    https://github.com/csjamesdu/shopAdmin.git
+2. Dropship Zone Data Adaptor: 
+    https://github.com/csjamesdu/drzData.git
+3. Shop-admin frontend Shopizer-admin revised: 
+    https://github.com/csjamesdu/shopizer-admin.git
+
+Docker Image Repos:
+1. Shop-admin backend Shopizer revised: 
+    csjamesdu/shop-back-end:v4
+2. Dropship Zone Data Adaptor: 
+    csjamesdu/drz-data-adaptor:v3
+3. Shop-admin frontend Shopizer-admin revised: 
+    csjamesdu/shopadmin:v3
+
+Locally Run with Docker Compose: 
+1. Start docker daemon (docker desktop or similar) 
+2. Go to the directory of docker-compose.yml file from terminal;
+3. run command: docker-compose up
+4. open browser at "localhost:4200/admin" 
+5. use default credential to login 
+    username: admin@shopizer.com
+    password: password

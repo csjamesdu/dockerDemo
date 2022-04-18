@@ -1,0 +1,33 @@
+--- 
+services:
+  shopizer:
+    image: csjamesdu/shop-back-end:v4
+    container_name: shop-back-end
+    environment:
+    - "config.cms.contentUrl=http://localhost:8080"
+    - "config.cms.method=default"
+    mem_limit: 2048m
+    networks:
+      - shopizer-network
+    ports: 
+      - "8080:8080"
+  shopizer-admin:
+    image: csjamesdu/shop-admin:v3
+    container_name: shop-admin
+    environment: 
+    - "APP_BASE_URL=http://localhost:8080/api"
+    networks:
+      - shopizer-network
+    ports: 
+      - "4200:80"
+  drz-data-adaptor:
+    image: csjamesdu/drz-data-adaptor:v3
+    container_name: drz-data
+    networks:
+      - shopizer-network
+    ports:
+      - "8081:8081"
+version: "2.2"
+
+networks:
+  shopizer-network:
